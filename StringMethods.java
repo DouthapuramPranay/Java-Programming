@@ -1,6 +1,6 @@
 public class StringMethods {
     public static void main(String[] args) {
-        String str = "java";
+        String str = new String("java");
         System.out.println(str.length());
         System.out.println(str.toUpperCase());
         System.out.println(str.toLowerCase());
@@ -17,5 +17,9 @@ public class StringMethods {
         System.out.println(str.equalsIgnoreCase("JAVA"));
         System.out.println(str.compareTo("java"));
         System.out.println(str.valueOf(1));
+
+        for (int i = 0; i < str.length(); i++) {
+            System.out.println(str.charAt(i));
+        }
     }
 }
