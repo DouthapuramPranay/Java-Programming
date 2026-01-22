@@ -1,16 +1,18 @@
 public class palindrome {
     public static void main(String[] args) {
+        int n = 121;
+        int rev = 0;
+        int temp = n;
+        while (n > 0) {
+            int rem = n % 10;
+            rev = rev * 10 + rem;
+            n = n / 10;
 
-        String str = "MADAM";
-        String rev = "";
-        for (int i = str.length() - 1; i >= 0; i--) {
-            rev = rev + str.charAt(i);
         }
-        if (str.equalsIgnoreCase(rev)) {
-            System.out.println("The given string is a palindrome");
+        if (temp == rev) {
+            System.out.println("palindrome");
         } else {
-            System.out.println("The given string is not a palindrome");
+            System.out.println("not palindrome");
         }
-
     }
 }

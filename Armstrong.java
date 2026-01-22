@@ -1,26 +1,19 @@
-import java.util.Scanner;
-
 public class Armstrong {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
+        int n = 153;
+        int temp = n;
         int sum = 0;
-        int count = 0;
-        int temp = a;
-        int temp2 = a;
-        while (a > 0) {
-            a /= 10;
-            count++;
+        while (n > 0) {
+            int digit = n % 10;
+            sum += Math.pow(digit, 3);
+            n = n / 10;
+
         }
-        while (temp > 0) {
-            int digit = temp % 10;
-            sum += (int) Math.pow(digit, count);
-            temp /= 10;
-        }
-        if (sum == temp2) {
-            System.out.println("The given number is an Armstrong number");
+        if (temp == sum) {
+            System.out.println("armstrong");
         } else {
-            System.out.println("The given number is not an Armstrong number");
+            System.out.println("Not Armstrong");
         }
+
     }
 }
